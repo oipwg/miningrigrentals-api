@@ -7,6 +7,7 @@ var baseURL = 'https://www.miningrigrentals.com/api/v1/'
 function MiningRigRentalsAPI(key, secret){
 	this.key = key;
 	this.secret = secret;
+	this.lastNonce = (new Date).getTime();
 }
 
 MiningRigRentalsAPI.prototype.listRigs = function(args, callback){
@@ -106,11 +107,10 @@ MiningRigRentalsAPI.prototype.listProfiles = function(callback){
 }
 
 MiningRigRentalsAPI.prototype.callAPI = function(object, args, callback){
-	// Get the current time in miliseconds
-	var milliseconds = (new Date).getTime();
+	var nonce = this.lastNonce = ++this.lastNonce
 
 	// Set the nonce in the args
-	args['nonce'] = milliseconds.toString();
+	args['nonce'] = nonce;
 
 	// Generate the query
 	var query = querystring.stringify(args);
