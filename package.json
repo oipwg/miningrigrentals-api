@@ -1,6 +1,6 @@
 {
   "name": "miningrigrentals-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node JS Module interface with the Mining Rig Rentals API easily",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dloa/miningrigrentals-api.git"
+    "url": "git+https://github.com/oipwg/miningrigrentals-api.git"
   },
   "keywords": [
     "Mining",
@@ -20,9 +20,9 @@
   ],
   "author": "OstlerDev <sky@alexandria.io>",
   "bugs": {
-    "url": "https://github.com/dloa/miningrigrentals-api/issues"
+    "url": "https://github.com/oipwg/miningrigrentals-api/issues"
   },
-  "homepage": "https://github.com/dloa/miningrigrentals-api#readme",
+  "homepage": "https://github.com/oipwg/miningrigrentals-api#readme",
   "dependencies": {
     "querystring": "^0.2.0",
     "request": "^2.72.0"
