@@ -107,7 +107,13 @@ MiningRigRentalsAPI.prototype.listProfiles = function(callback){
 }
 
 MiningRigRentalsAPI.prototype.callAPI = function(object, args, callback){
-	var nonce = this.lastNonce = ++this.lastNonce
+	var nonce = (new Date).getTime();
+	if (this.lastNonce == nonce){
+		nonce = this.lastNonce = ++this.lastNonce;
+	} else {
+		this.lastNonce = nonce;
+	}
+	console.log(nonce, args);
 
 	// Set the nonce in the args
 	args['nonce'] = nonce;
