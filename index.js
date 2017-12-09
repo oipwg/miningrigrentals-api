@@ -19,7 +19,7 @@ MiningRigRentalsAPI.prototype.listRigs = function(args, callback){
 	}
 	
 	args['method'] = 'list';
-	this.callAPI('rigs', args, function(error, body){
+	this.callAPI('rig/list', args, function(error, body){
 		callback(error, body);
 	});
 }
