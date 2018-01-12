@@ -32,7 +32,7 @@ MiningRigRentalsAPI.prototype.getRigDetail = function(id, callback){
 		return;
 	}
 
-	this.callAPI('rigs', {method: 'detail', id: id}, function(error, body){
+	this.callAPI('rig', {method: 'detail', id: id}, function(error, body){
 		callback(error, body);
 	});
 }
@@ -70,7 +70,7 @@ MiningRigRentalsAPI.prototype.updateRig = function(args, callback){
 	}
 
 	args['method'] = 'update';
-	this.callAPI('rigs', args, function(error, body){
+	this.callAPI('rig', args, function(error, body){
 		callback(error, body);
 	});
 }
@@ -83,7 +83,7 @@ MiningRigRentalsAPI.prototype.rentRig = function(args, callback){
 	}
 
 	args['method'] = 'rent';
-	this.callAPI('rigs', args, function(error, body){
+	this.callAPI('rig', args, function(error, body){
 		callback(error, body);
 	});
 }
